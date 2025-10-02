@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -100,6 +100,125 @@
             margin-right: auto;
         }
 
+        .live-prices {
+            padding: 4rem 5%;
+            background: rgba(15, 12, 41, 0.5);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .price-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .price-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .price-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+            border-color: rgba(102, 126, 234, 0.5);
+        }
+
+        .crypto-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .crypto-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+        }
+
+        .crypto-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .crypto-symbol {
+            font-size: 0.9rem;
+            color: #b8b8d1;
+            text-transform: uppercase;
+        }
+
+        .crypto-price {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        .crypto-change {
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        .positive {
+            color: #4ade80;
+            background: rgba(74, 222, 128, 0.1);
+        }
+
+        .negative {
+            color: #f87171;
+            background: rgba(248, 113, 113, 0.1);
+        }
+
+        .crypto-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat {
+            text-align: left;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: #b8b8d1;
+            margin-bottom: 0.3rem;
+        }
+
+        .stat-value {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 4rem 2rem;
+            font-size: 1.5rem;
+            color: #b8b8d1;
+        }
+
+        .update-time {
+            text-align: center;
+            color: #b8b8d1;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+
         .stats {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -128,110 +247,12 @@
             margin-top: 0.5rem;
         }
 
-        .features {
-            padding: 6rem 5%;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .feature-card {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 2.5rem;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
-            border-color: rgba(102, 126, 234, 0.5);
-        }
-
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .feature-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #667eea;
-        }
-
-        .feature-card p {
-            color: #b8b8d1;
-            line-height: 1.6;
-        }
-
-        .learning-tracks {
-            padding: 6rem 5%;
-            background: rgba(15, 12, 41, 0.5);
-        }
-
-        .track-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .track-card {
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
-            padding: 2.5rem;
-            border-radius: 20px;
-            border: 2px solid rgba(102, 126, 234, 0.3);
-            text-align: center;
-        }
-
-        .track-title {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            color: #667eea;
-        }
-
-        .track-list {
-            list-style: none;
-            margin-top: 1.5rem;
-        }
-
-        .track-list li {
-            padding: 0.5rem 0;
-            color: #b8b8d1;
-        }
-
-        .cta-section {
-            padding: 6rem 5%;
-            text-align: center;
-        }
-
-        .cta-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .cta-section p {
-            font-size: 1.2rem;
-            color: #b8b8d1;
-            margin-bottom: 2rem;
-        }
-
         footer {
             background: rgba(15, 12, 41, 0.8);
             padding: 2rem 5%;
             text-align: center;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 4rem;
         }
 
         footer p {
@@ -242,9 +263,11 @@
             .hero h1 {
                 font-size: 2.5rem;
             }
-
             .nav-links {
                 display: none;
+            }
+            .crypto-stats {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -253,17 +276,25 @@
     <nav class="nav">
         <div class="logo">⚡ Crypto Forge Labs</div>
         <ul class="nav-links">
-            <li><a href="#features">Features</a></li>
-            <li><a href="#learning">Learning Tracks</a></li>
+            <li><a href="#prices">Live Prices</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
         </ul>
         <button class="cta-btn">Get Started</button>
     </nav>
 
     <section class="hero">
         <h1>Master Cryptocurrency with Confidence</h1>
-        <p>From blockchain basics to advanced trading strategies, we provide the education and tools you need to navigate the crypto market successfully.</p>
+        <p>Real-time market data, comprehensive education, and expert guidance to navigate the crypto market successfully.</p>
         <button class="cta-btn" style="font-size: 1.1rem; padding: 1rem 3rem;">Start Learning Free</button>
+    </section>
+
+    <section id="prices" class="live-prices">
+        <h2 class="section-title">Live Crypto Prices 📊</h2>
+        <div id="priceContainer" class="loading">
+            Loading live market data...
+        </div>
+        <div id="updateTime" class="update-time"></div>
     </section>
 
     <section class="stats">
@@ -276,94 +307,112 @@
             <div class="stat-label">Real-time market data</div>
         </div>
         <div class="stat-card">
-            <div class="stat-number">3</div>
-            <div class="stat-label">Learning tracks tailored to you</div>
+            <div class="stat-number" id="fearGreedValue">...</div>
+            <div class="stat-label" id="fearGreedLabel">Loading Fear & Greed Index...</div>
         </div>
-    </section>
-
-    <section id="features" class="features">
-        <h2 class="section-title">Why Choose Crypto Forge Labs?</h2>
-        <div class="feature-grid">
-            <div class="feature-card">
-                <div class="feature-icon">📚</div>
-                <h3>Comprehensive Education</h3>
-                <p>Structured learning paths from beginner to advanced, with interactive quizzes and certifications to track your progress.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">📊</div>
-                <h3>Real-Time Market Data</h3>
-                <p>Live cryptocurrency prices, charts, and analytics powered by industry-leading APIs to keep you informed.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🎯</div>
-                <h3>Expert Consultations</h3>
-                <p>Book one-on-one sessions with crypto experts to get personalized guidance for your investment journey.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🤖</div>
-                <h3>AI-Powered Tutor</h3>
-                <p>Get instant answers to your crypto questions with our intelligent AI assistant available 24/7.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🔒</div>
-                <h3>Security First</h3>
-                <p>Learn best practices for wallet security, exchange safety, and protecting your digital assets.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🌐</div>
-                <h3>Community & Webinars</h3>
-                <p>Join live Q&A sessions, webinars, and connect with fellow learners in our growing community.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="learning" class="learning-tracks">
-        <h2 class="section-title">Choose Your Learning Path</h2>
-        <div class="track-container">
-            <div class="track-card">
-                <div class="feature-icon">🌱</div>
-                <h3 class="track-title">Beginner Track</h3>
-                <p style="color: #b8b8d1;">Start your crypto journey</p>
-                <ul class="track-list">
-                    <li>✓ Blockchain Basics</li>
-                    <li>✓ Wallets & Exchanges</li>
-                    <li>✓ Stablecoins</li>
-                    <li>✓ Security Fundamentals</li>
-                </ul>
-            </div>
-            <div class="track-card">
-                <div class="feature-icon">⚡</div>
-                <h3 class="track-title">Intermediate Track</h3>
-                <p style="color: #b8b8d1;">Level up your knowledge</p>
-                <ul class="track-list">
-                    <li>✓ DeFi Protocols</li>
-                    <li>✓ Staking & Yield Farming</li>
-                    <li>✓ Liquidity Pools</li>
-                    <li>✓ Tokenomics</li>
-                </ul>
-            </div>
-            <div class="track-card">
-                <div class="feature-icon">🚀</div>
-                <h3 class="track-title">Advanced Track</h3>
-                <p style="color: #b8b8d1;">Master the market</p>
-                <ul class="track-list">
-                    <li>✓ Technical Analysis</li>
-                    <li>✓ On-Chain Metrics</li>
-                    <li>✓ Smart Contracts</li>
-                    <li>✓ Advanced Trading</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-section">
-        <h2>Ready to Start Your Crypto Journey?</h2>
-        <p>Join thousands of learners mastering cryptocurrency with confidence</p>
-        <button class="cta-btn" style="font-size: 1.1rem; padding: 1rem 3rem;">Get Started Today</button>
     </section>
 
     <footer>
         <p>&copy; 2025 Crypto Forge Labs. Empowering the next generation of crypto investors.</p>
     </footer>
+
+    <script>
+        // Fetch live crypto prices from CoinGecko API (Free, no key needed!)
+        async function fetchCryptoPrices() {
+            try {
+                const response = await fetch(
+                    'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=6&page=1&sparkline=false&price_change_percentage=24h'
+                );
+                const data = await response.json();
+                displayPrices(data);
+                updateTimestamp();
+            } catch (error) {
+                console.error('Error fetching prices:', error);
+                document.getElementById('priceContainer').innerHTML = 
+                    '<p style="color: #f87171;">Unable to load prices. Please refresh the page.</p>';
+            }
+        }
+
+        // Fetch Fear & Greed Index
+        async function fetchFearGreed() {
+            try {
+                const response = await fetch('https://api.alternative.me/fng/');
+                const data = await response.json();
+                const index = data.data[0];
+                document.getElementById('fearGreedValue').textContent = index.value;
+                document.getElementById('fearGreedLabel').textContent = 
+                    `Fear & Greed Index: ${index.value_classification}`;
+            } catch (error) {
+                console.error('Error fetching Fear & Greed:', error);
+            }
+        }
+
+        function displayPrices(coins) {
+            const container = document.getElementById('priceContainer');
+            container.className = 'price-grid';
+            container.innerHTML = '';
+
+            coins.forEach(coin => {
+                const changeClass = coin.price_change_percentage_24h >= 0 ? 'positive' : 'negative';
+                const changeSymbol = coin.price_change_percentage_24h >= 0 ? '+' : '';
+                
+                const card = document.createElement('div');
+                card.className = 'price-card';
+                card.innerHTML = `
+                    <div class="crypto-header">
+                        <img src="${coin.image}" alt="${coin.name}" class="crypto-icon">
+                        <div>
+                            <div class="crypto-name">${coin.name}</div>
+                            <div class="crypto-symbol">${coin.symbol}</div>
+                        </div>
+                    </div>
+                    <div class="crypto-price">$${coin.current_price.toLocaleString()}</div>
+                    <div class="crypto-change ${changeClass}">
+                        ${changeSymbol}${coin.price_change_percentage_24h.toFixed(2)}%
+                    </div>
+                    <div class="crypto-stats">
+                        <div class="stat">
+                            <div class="stat-label">Market Cap</div>
+                            <div class="stat-value">$${(coin.market_cap / 1e9).toFixed(2)}B</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-label">24h Volume</div>
+                            <div class="stat-value">$${(coin.total_volume / 1e9).toFixed(2)}B</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-label">Rank</div>
+                            <div class="stat-value">#${coin.market_cap_rank}</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-label">24h High</div>
+                            <div class="stat-value">$${coin.high_24h.toLocaleString()}</div>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function updateTimestamp() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('en-US', { 
+                hour: '2-digit', 
+                minute: '2-digit',
+                second: '2-digit'
+            });
+            document.getElementById('updateTime').textContent = 
+                `Last updated: ${timeString} • Updates every 60 seconds`;
+        }
+
+        // Initial fetch
+        fetchCryptoPrices();
+        fetchFearGreed();
+
+        // Update prices every 60 seconds
+        setInterval(fetchCryptoPrices, 60000);
+        
+        // Update Fear & Greed every 5 minutes
+        setInterval(fetchFearGreed, 300000);
+    </script>
 </body>
 </html>
