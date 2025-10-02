@@ -1,0 +1,369 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Forge Labs - Master Cryptocurrency with Confidence</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            background: rgba(15, 12, 41, 0.8);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        .cta-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        .hero {
+            padding: 10rem 5% 6rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            background: linear-gradient(135deg, #ffffff 0%, #667eea 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            color: #b8b8d1;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 4rem 5%;
+            background: rgba(15, 12, 41, 0.5);
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: #b8b8d1;
+            margin-top: 0.5rem;
+        }
+
+        .features {
+            padding: 6rem 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+            border-color: rgba(102, 126, 234, 0.5);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #667eea;
+        }
+
+        .feature-card p {
+            color: #b8b8d1;
+            line-height: 1.6;
+        }
+
+        .learning-tracks {
+            padding: 6rem 5%;
+            background: rgba(15, 12, 41, 0.5);
+        }
+
+        .track-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .track-card {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 2px solid rgba(102, 126, 234, 0.3);
+            text-align: center;
+        }
+
+        .track-title {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #667eea;
+        }
+
+        .track-list {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .track-list li {
+            padding: 0.5rem 0;
+            color: #b8b8d1;
+        }
+
+        .cta-section {
+            padding: 6rem 5%;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            color: #b8b8d1;
+            margin-bottom: 2rem;
+        }
+
+        footer {
+            background: rgba(15, 12, 41, 0.8);
+            padding: 2rem 5%;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        footer p {
+            color: #b8b8d1;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="logo">⚡ Crypto Forge Labs</div>
+        <ul class="nav-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#learning">Learning Tracks</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+        <button class="cta-btn">Get Started</button>
+    </nav>
+
+    <section class="hero">
+        <h1>Master Cryptocurrency with Confidence</h1>
+        <p>From blockchain basics to advanced trading strategies, we provide the education and tools you need to navigate the crypto market successfully.</p>
+        <button class="cta-btn" style="font-size: 1.1rem; padding: 1rem 3rem;">Start Learning Free</button>
+    </section>
+
+    <section class="stats">
+        <div class="stat-card">
+            <div class="stat-number">60%</div>
+            <div class="stat-label">Of users feel overwhelmed by crypto</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">Real-time market data</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number">3</div>
+            <div class="stat-label">Learning tracks tailored to you</div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <h2 class="section-title">Why Choose Crypto Forge Labs?</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📚</div>
+                <h3>Comprehensive Education</h3>
+                <p>Structured learning paths from beginner to advanced, with interactive quizzes and certifications to track your progress.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Real-Time Market Data</h3>
+                <p>Live cryptocurrency prices, charts, and analytics powered by industry-leading APIs to keep you informed.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>Expert Consultations</h3>
+                <p>Book one-on-one sessions with crypto experts to get personalized guidance for your investment journey.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🤖</div>
+                <h3>AI-Powered Tutor</h3>
+                <p>Get instant answers to your crypto questions with our intelligent AI assistant available 24/7.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Security First</h3>
+                <p>Learn best practices for wallet security, exchange safety, and protecting your digital assets.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌐</div>
+                <h3>Community & Webinars</h3>
+                <p>Join live Q&A sessions, webinars, and connect with fellow learners in our growing community.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="learning" class="learning-tracks">
+        <h2 class="section-title">Choose Your Learning Path</h2>
+        <div class="track-container">
+            <div class="track-card">
+                <div class="feature-icon">🌱</div>
+                <h3 class="track-title">Beginner Track</h3>
+                <p style="color: #b8b8d1;">Start your crypto journey</p>
+                <ul class="track-list">
+                    <li>✓ Blockchain Basics</li>
+                    <li>✓ Wallets & Exchanges</li>
+                    <li>✓ Stablecoins</li>
+                    <li>✓ Security Fundamentals</li>
+                </ul>
+            </div>
+            <div class="track-card">
+                <div class="feature-icon">⚡</div>
+                <h3 class="track-title">Intermediate Track</h3>
+                <p style="color: #b8b8d1;">Level up your knowledge</p>
+                <ul class="track-list">
+                    <li>✓ DeFi Protocols</li>
+                    <li>✓ Staking & Yield Farming</li>
+                    <li>✓ Liquidity Pools</li>
+                    <li>✓ Tokenomics</li>
+                </ul>
+            </div>
+            <div class="track-card">
+                <div class="feature-icon">🚀</div>
+                <h3 class="track-title">Advanced Track</h3>
+                <p style="color: #b8b8d1;">Master the market</p>
+                <ul class="track-list">
+                    <li>✓ Technical Analysis</li>
+                    <li>✓ On-Chain Metrics</li>
+                    <li>✓ Smart Contracts</li>
+                    <li>✓ Advanced Trading</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Ready to Start Your Crypto Journey?</h2>
+        <p>Join thousands of learners mastering cryptocurrency with confidence</p>
+        <button class="cta-btn" style="font-size: 1.1rem; padding: 1rem 3rem;">Get Started Today</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Crypto Forge Labs. Empowering the next generation of crypto investors.</p>
+    </footer>
+</body>
+</html>
